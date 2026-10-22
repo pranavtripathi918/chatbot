@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}{{ query[:60] }}{% endblock %}
+{% block content %}
+  <h1 class="headline question">{{ query }}</h1>
+
+  {% if error %}
+    <p class="error" role="alert">{{ error }}</p>
+  {% else %}
+    <article class="answer">{{ response }}</article>
+  {% endif %}
+
+  <hr>
+  {% include "_form.html" %}
+{% endblock %}

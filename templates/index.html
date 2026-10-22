@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}Ask{% endblock %}
+{% block content %}
+  <h1 class="headline">What do you want to know?</h1>
+  {% if error %}
+    <p class="error" role="alert">{{ error }}</p>
+  {% endif %}
+  {% include "_form.html" %}
+{% endblock %}

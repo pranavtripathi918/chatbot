@@ -1,0 +1,6 @@
+<form id="ask-form" method="post" action="{{ url_for('result') }}">
+  <label for="query">Your question</label>
+  <textarea id="query" name="query" rows="3" required autofocus
+            placeholder="Type here. Enter to send, Shift+Enter for a new line."></textarea>
+  <button type="submit">Ask</button>
+</form>
